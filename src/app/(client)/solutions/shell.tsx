@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import { Carousel } from '@mantine/carousel'
-import { Container } from '@mantine/core'
+import { Container, Title } from '@mantine/core'
+import CustomCarousel from '@/components/CustomCarousel'
 
 export default function Shell() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -40,84 +41,62 @@ export default function Shell() {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white flex justify-center flex-col ">
 
             {/* Hero Section */}
-            <div className="relative h-[60vh] mt-20">
-                <Image
-                    src="https://farmerskonnect.org/static/media/farm.bad4e670ade21cd55a4a.jpg"
-                    alt="Farmers in field"
-                    fill
-                    className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute bottom-8 left-8 text-white">
-                    <div className="flex items-center space-x-2 text-sm">
-                        <Link href="/" className="hover:underline">AGVENTURE | HOME</Link>
-                        <span>›</span>
-                        <span className="text-green-400">SOLUTIONS</span>
+            <div className="relative h-[60vh] container mx-auto bg-white">
+                <div className="overflow-hidden rounded-b-[100px] bg-white bg-cover bg-no-repeat">
+                    <Image
+                        src="/images/banner.jpeg"
+                        alt="Farmers in field"
+                        fill
+                        className="object-cover transition duration-300 ease-in-out hover:scale-110"
+                        style={{
+                            borderBottomLeftRadius: '100px',
+                            borderBottomRightRadius: '100px',
+                        }}
+                    />
+                </div>
+
+                <div className="absolute inset-0 bg-black/40 rounded-b-[100px]" />
+                <div className="absolute bottom-[100px] left-[150px] text-white">
+                    <div className="flex flex-col items-left">
+                        <div className="flex items-center gap-2 text-sm ">
+                            <Link href="/" className="hover:underline">FARMERS' KONNECT | HOME</Link>
+                            <span>›</span>
+                            <span className="text-green-400">SOLUTIONS</span>
+                        </div>
+                        <Title order={1} component="div"> <span className="text-white">SOLUTIONS</span></Title>
                     </div>
                 </div>
             </div>
 
+
             {/* Main Content */}
-            <Container m="lg">
-                    <div className="text-center mb-16 flex flex-col md:flex-row md:justify-between w-full">
-                        <div className="flex flex-col">
-                        <h4 className="text-lg font-bold mb-4">WHAT WE OFFER</h4>
-                        <h2 className="text-3xl font-bold mb-4 text-green-900">OUR SOLUTIONS</h2>
+            <div className='container mx-auto'>
+                <div className="flex w-full justify-center h-[200px]">
+                    <div className=" py-16 flex flex-col w-full lg:w-[80%] mx-auto md:flex-row justify-between ">
+                        <div className="flex flex-col items-left ">
+                            <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title>
+                            <Title order={1} className="text-3xl font-bold  text-green-900">OUR SOLUTIONS</Title>
                         </div>
-                       
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Our market-led crop diversification initiative builds resilient and profitable farming communities through
-                        </p>
+                        <div className="flex items-right">
+                            <p className="text-gray-900 text-bold text-lg max-w-xl mx-auto ">
+                                Our market-led crop diversification initiative builds resilient and profitable farming communities through
+                            </p>
+                        </div>
+
                     </div>
+                </div>
 
+                <div className="mb-[200px]">
                     {/* Carousel */}
-                    <Carousel
-                        slideSize="33.33%"
-                        slideGap="sm"
-                        loop
-                        align="start"
-                        styles={{
-                            root: {
-                                height: "fit-content"
-                            },
-                            control: {
-                                backgroundColor: 'white',  // Change background color of side buttons
-                                color: 'black',  // Change arrow color
-                                borderRadius: '50%',  // Make buttons circular
-                                width: 40,  // Set width of the buttons
-                                height: 40,  // Set height of the buttons
-                                '&:hover': {
-                                    backgroundColor: 'grey',  // Change background color on hover
-                                },
-                            },
-                        }}
-                    >
-                        {slides.map((slide, index) => (
-                            <Carousel.Slide key={index}>
-                                <div key={slide.id} className="w-full flex-shrink-0 px-4 lg:w-[400px]">
-                                    <div className="bg-green-600 rounded-lg overflow-hidden">
-                                        <Image
-                                            src="/images/canolafarming.jpg"
-                                            alt={slide.title}
-                                            width={400}
-                                            height={300}
-                                            className="w-full h-64 object-cover"
-                                        />
-                                        <div className="p-8">
-                                            <div className="text-6xl text-white/20 font-bold mb-4">{slide.id}</div>
-                                            <h3 className="text-xl text-white font-semibold mb-2">{slide.title}</h3>
-                                            <p className="text-white/90">{slide.description}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Carousel.Slide>
-                        ))}
-                    </Carousel>
+                    <CustomCarousel slides={slides}/>
+                    
+                </div>
 
-            </Container>
+
+            </div>
 
         </div>
     )
