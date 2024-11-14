@@ -9,7 +9,6 @@ import { Container, Title } from '@mantine/core'
 import CustomCarousel from '@/components/CustomCarousel'
 
 export default function Shell() {
-    const [currentSlide, setCurrentSlide] = useState(0)
 
     const slides = [
         {
@@ -22,29 +21,40 @@ export default function Shell() {
             id: 2,
             title: "Expert Guidance",
             description: "Expert guidance tailored to your farm's unique needs.",
-            image: "/placeholder.svg?height=300&width=400",
+            image: "/images/canolafarming.jpg",
         },
         {
             id: 3,
             title: "Seed Solutions",
             description: "Creating a bridge between farmers and the seed value chain.",
-            image: "/placeholder.svg?height=300&width=400",
+            image: "/images/canolafarming.jpg",
+        },
+        {
+            id: 4,
+            title: "Market Access",
+            description: "Connecting farmers to stable and lucrative markets.",
+            image: "/images/canolafarming.jpg",
+        },
+        {
+            id: 5,
+            title: "Expert Guidance",
+            description: "Expert guidance tailored to your farm's unique needs.",
+            image: "/images/canolafarming.jpg",
+        },
+        {
+            id: 6,
+            title: "Seed Solutions",
+            description: "Creating a bridge between farmers and the seed value chain.",
+            image: "/images/canolafarming.jpg",
         }
     ]
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-    }
 
     return (
-        <div className="min-h-screen bg-white flex justify-center flex-col ">
+        <div className="min-h-screen bg-white flex justify-center flex-col overflow-x-hidden">
 
             {/* Hero Section */}
-            <div className="relative h-[60vh] container mx-auto bg-white">
+            <div className="relative h-[60vh] container mx-auto bg-white ">
                 <div className="overflow-hidden rounded-b-[100px] bg-white bg-cover bg-no-repeat">
                     <Image
                         src="/images/banner.jpeg"
@@ -88,12 +98,14 @@ export default function Shell() {
 
                     </div>
                 </div>
+                <div className="container mx-auto  flex justify-center items-center">
+                    <div className="w-[79%]">
+                        {/* Carousel */}
+                        <CustomCarousel slides={slides} />
 
-                <div className="mb-[200px]">
-                    {/* Carousel */}
-                    <CustomCarousel slides={slides}/>
-                    
+                    </div>
                 </div>
+
 
 
             </div>
