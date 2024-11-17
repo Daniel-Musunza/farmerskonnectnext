@@ -69,8 +69,8 @@ export default function Shell() {
                 </div>
 
                 <div className="absolute inset-0 bg-black/40 rounded-b-[100px]" />
-                <div className="absolute bottom-[100px] left-[150px] text-white">
-                    <div className="flex flex-col items-left">
+                <div className="absolute bottom-6 left-4 lg:bottom-10 lg:left-20 text-white">
+                    <div className="flex flex-col items-left p-[20px]">
                         <div className="flex items-center gap-2 text-sm ">
                             <Link href="/" className="hover:underline">FARMERS' KONNECT | HOME</Link>
                             <span>›</span>
@@ -83,9 +83,9 @@ export default function Shell() {
 
 
             {/* Main Content */}
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-6 flex flex-col justify-center'>
                 <div className="flex w-full justify-center h-[200px]">
-                    <div className=" py-16 flex flex-col w-full lg:w-[80%] mx-auto md:flex-row justify-between ">
+                    <div className=" py-16 flex flex-col w-full lg:w-[80%] mx-auto md:flex-row justify-center md:justify-between gap-2">
                         <div className="flex flex-col items-left ">
                             <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title>
                             <Title order={1} className="text-3xl font-bold  text-green-900">OUR SOLUTIONS</Title>
@@ -99,7 +99,7 @@ export default function Shell() {
                     </div>
                 </div>
                 <div className="container mx-auto  flex justify-center items-center">
-                    <div className="w-[79%]">
+                    <div className="w-full lg:w-[79%]">
                         {/* Carousel */}
                         <CustomCarousel slides={slides} />
 
