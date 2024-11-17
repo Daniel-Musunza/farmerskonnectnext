@@ -54,7 +54,7 @@ export default function Shell() {
         <div className="min-h-screen bg-white flex justify-center flex-col overflow-x-hidden">
 
             {/* Hero Section */}
-            <div className="relative h-[60vh] container mx-auto bg-white ">
+            <div className="relative h-[50vh] md:h-[50vh] lg:h-[60vh] container mx-auto bg-white ">
                 <div className="overflow-hidden rounded-b-[100px] bg-white bg-cover bg-no-repeat">
                     <Image
                         src="/images/banner.jpeg"

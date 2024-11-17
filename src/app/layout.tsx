@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { MantineProvider } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
 import { ToastContainer } from 'react-toastify';
+import Header from "@/components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,8 +40,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+     
         <MantineProvider >
           <ModalsProvider>
+          <Header />
             {children}
           </ModalsProvider>
         </MantineProvider>
