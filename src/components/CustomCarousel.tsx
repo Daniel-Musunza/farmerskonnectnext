@@ -34,7 +34,7 @@ const CustomCarousel = ({ slides }: any) => {
 
         <Slider {...settings} >
             {slides.map((slide: any, index: number) => (
-                <div key={index} className="flex justify-center lg:ml-[25px] h-[400px]">
+                <div key={index} className="flex justify-center lg:ml-[30px] h-[400px]">
                     <div
                         className="bg-green-600 w-[320px] overflow-hidden ml-3 lg:ml-0"
                         style={{
