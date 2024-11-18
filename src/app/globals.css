@@ -108,6 +108,7 @@ body {
 }
 
 @media (max-width:1080px) {
+   
     section {
         padding: 10px 25px;
     }
@@ -122,7 +123,7 @@ body {
 
 }
 
-@media (max-width:912px) {
+@media (max-width:756px) {
     .header {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;

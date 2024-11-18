@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import fontawesome from '../(icons)/fontawesome';
-import { Button, Menu, Modal, Title } from '@mantine/core';
+import { Button, Menu, Modal, Title, Text } from '@mantine/core';
 export default function Header() {
     const [isClient, setIsClient] = useState(false);
 
@@ -123,7 +123,7 @@ export default function Header() {
                 id="header"
                 style={{
                     ...headerStyle,
-                   
+
                 }}
             >
                 <div className="container">
@@ -147,7 +147,7 @@ export default function Header() {
                     </nav>
                     <div className="right-data">
                         <a
-                            href="https://wa.me/254795333777"
+                            href="https://wa.me/254703363464"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textTransform: 'none' }}
@@ -162,14 +162,14 @@ export default function Header() {
                                 {user ? (
                                     <button
                                         onClick={logout}
-                                        className="ml-4 hidden lg:flex w-fit py-1 px-2 rounded-sm cursor-pointer border-[1px] border-[#ffff] bg-white text-[14px]"
+                                        className="ml-4 hidden lg:flex w-fit py-1 px-2 rounded-sm cursor-pointer border-[1px] border-[#16A34A] bg-white text-[14px]"
                                     >
                                         Logout
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => setOpened(true)}
-                                        className="ml-4 hidden lg:flex w-fit py-1 px-2 rounded-sm cursor-pointer border-[1px] border-[#ffff] bg-white text-[14px]"
+                                        className="ml-4 hidden lg:flex w-fit py-1 px-2 rounded-sm cursor-pointer border-[1px] border-[#16A34A] text-[#16A34A] bg-white text-[14px]"
                                     >
                                         GET IN TOUCH
                                     </button>
@@ -219,39 +219,57 @@ export default function Header() {
                                 <Menu.Item py="md">
                                     <Link href={`/blogs/${firstblogid}`} className='text-white font-bold'>BLOGS</Link>
                                 </Menu.Item>
-
                                 <Menu.Item py="md">
-                                    {isClient && (
-                                        <>
-                                            {user ? (
+                                    <a href="https://wa.me/254703363464"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                         className='text-white flex gap-2 items-center'
+                                    >
+                                    <FontAwesomeIcon icon={fontawesome.faWhatsapp} />
+                                      <Text size='sm'> WHATSAPP </Text>
+                                    </a>
+                                </Menu.Item>
+
+                                {isClient && (
+                                    user ? (
+                                        <Menu.Item pt="md">
+                                            <Button
+                                                onClick={logout}
+                                                variant="outline"
+                                                color="#ffff"
+                                                c="#FFFF"
+                                            >
+                                                Logout
+                                            </Button>
+                                        </Menu.Item>
+                                    ) : (
+                                        <Menu.Item pt="md">
+                                            <div className="flex justify-between w-full">
                                                 <Button
-                                                    onClick={logout}
+
                                                     variant="outline"
-                                                    color="#FFFF"
+                                                    color="#ffff"
                                                     c="#FFFF"
                                                 >
-                                                    Logout
+                                                    Login
                                                 </Button>
-                                            ) : (
-                                                <a
-                                                    href="https://wa.me/254795333777"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <Button
-                                                        variant="outline"
-                                                        color="#ffff"
-                                                        c="#ffff"
-                                                        leftSection={<FontAwesomeIcon icon={fontawesome.faWhatsapp} />}
-                                                    >
-                                                        WHATSAPP
-                                                    </Button>
-                                                </a>
+                                                <Button
 
-                                            )}
-                                        </>
-                                    )}
-                                </Menu.Item>
+                                                    variant="filled"
+                                                    color="#ffff"
+                                                    c="#16A34A"
+                                                >
+                                                    Create an account
+                                                </Button>
+                                            </div>
+
+                                        </Menu.Item>
+
+                                    )
+                                )}
+
+
+
                             </Menu.Dropdown>
                         </Menu>
                     </div>

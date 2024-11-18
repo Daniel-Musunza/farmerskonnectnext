@@ -84,9 +84,9 @@ export default function Shell() {
 
             {/* Main Content */}
             <div className='container mx-auto px-6 flex flex-col justify-center'>
-                <div className="flex w-full justify-center h-[200px]">
-                    <div className=" py-16 flex flex-col w-full lg:w-[80%] mx-auto md:flex-row justify-center md:justify-between gap-2">
-                        <div className="flex flex-col items-left ">
+                <div className="flex w-full justify-center lg:h-[200px]">
+                    <div className=" py-16 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
+                        <div className="flex flex-col text-center lg:text-left ">
                             <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title>
                             <Title order={1} className="text-3xl font-bold  text-green-900">OUR SOLUTIONS</Title>
                         </div>
@@ -99,7 +99,7 @@ export default function Shell() {
                     </div>
                 </div>
                 <div className="container mx-auto  flex justify-center items-center">
-                    <div className="w-full lg:w-[79%]">
+                    <div className="w-full lg:w-[80%]">
                         {/* Carousel */}
                         <CustomCarousel slides={slides} />
 
