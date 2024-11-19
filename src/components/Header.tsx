@@ -13,11 +13,13 @@ export default function Header() {
     useEffect(() => {
         setIsClient(true);
     }, []);
+    
     const router = useRouter()
     const pathname = usePathname();
     const [headerStyle, setHeaderStyle] = useState<any>({
         backgroundColor: '#ffff',
-        position: 'fixed',
+        position: 'absolute',
+        // position: 'fixed',
         top: '0'
 
     });
@@ -38,20 +40,12 @@ export default function Header() {
     };
 
     useEffect(() => {
-        if (pathname === '/' || pathname === '/adminlogin') {
-            setHeaderStyle({
-                backgroundColor: 'transparent',
-                position: 'absolute',
-                transition: 'background-color 1s ease, top 1s ease',
-            });
-        } else {
-            setHeaderStyle({
-                top: '0',
-                backgroundColor: '#ffff',
-                // position: 'fixed'
-                position: 'absolute',
-            });
-        }
+        setHeaderStyle({
+            backgroundColor: '#ffff',
+            position: 'absolute',
+            transition: 'background-color 1s ease, top 1s ease',
+        });
+
     }, [pathname]);
 
     useEffect(() => {
@@ -62,13 +56,22 @@ export default function Header() {
 
             if (currentScrollY > lastScrollY) {
                 // Scrolling down
-                if (pathname === '/' || pathname === '/adminlogin') {
+                setHeaderStyle({
+                    transition: 'background-color 1s ease, top 1s ease',
+                    backgroundColor: '#ffff',
+                    // position: 'fixed',
+                    position: 'absolute',
+                    top: '-100px', // Hide the header when scrolling down
+                });
+
+            } else {
+                // Scrolling up
+                if (currentScrollY < scrollThreshold) {
                     setHeaderStyle({
                         transition: 'background-color 1s ease, top 1s ease',
                         backgroundColor: '#ffff',
-                        // position: 'fixed',
                         position: 'absolute',
-                        top: '-100px', // Hide the header when scrolling down
+                        top: '0',
                     });
                 } else {
                     setHeaderStyle({
@@ -78,32 +81,7 @@ export default function Header() {
                         top: '0',
                     });
                 }
-            } else {
-                // Scrolling up
-                if (pathname === '/' || pathname === '/adminlogin') {
-                    if (currentScrollY < scrollThreshold) {
-                        setHeaderStyle({
-                            transition: 'background-color 1s ease, top 1s ease',
-                            backgroundColor: 'transparent',
-                            position: 'absolute',
-                            top: '0',
-                        });
-                    } else {
-                        setHeaderStyle({
-                            backgroundColor: '#ffff',
-                            // position: 'fixed',
-                            position: 'absolute',
-                            top: '0',
-                        });
-                    }
-                } else {
-                    setHeaderStyle({
-                        backgroundColor: '#ffff',
-                        // position: 'fixed',
-                        position: 'absolute',
-                        top: '0',
-                    });
-                }
+
             }
 
             setLastScrollY(currentScrollY);
@@ -223,10 +201,10 @@ export default function Header() {
                                     <a href="https://wa.me/254703363464"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                         className='text-white flex gap-2 items-center'
+                                        className='text-white flex gap-2 items-center'
                                     >
-                                    <FontAwesomeIcon icon={fontawesome.faWhatsapp} />
-                                      <Text size='sm'> WHATSAPP </Text>
+                                        <FontAwesomeIcon icon={fontawesome.faWhatsapp} />
+                                        <Text size='sm'> WHATSAPP </Text>
                                     </a>
                                 </Menu.Item>
 
