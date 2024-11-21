@@ -119,8 +119,8 @@ export default function Header() {
                         <div className="navbar2" id="navbar2">
                             <Link href="/about" className='text-black font-bold'>ABOUT US</Link>
                             <Link href="/solutions" className='text-black font-bold'>SOLUTIONS</Link>
-                            <Link href="/listings" className='text-black font-bold'>Listings</Link>
-                            <Link href={`/blogs/${firstblogid}`} className='text-black font-bold'>Blogs</Link>
+                            <Link href="/listings" className='text-black font-bold'> LAND LISTINGS</Link>
+                            <Link href={`/blogs/${firstblogid}`} className='text-black font-bold'>BLOGS</Link>
                         </div>
                     </nav>
                     <div className="right-data">
@@ -191,7 +191,7 @@ export default function Header() {
                                 </Menu.Item>
                                 <Menu.Item py="md">
                                     <Link href="/listings" className='text-white font-bold'>
-                                        LISTINGS
+                                        LAND LISTINGS
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item py="md">

@@ -29,7 +29,7 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
                 </div>
 
                 <div className="px-8 mb-8 fade-down" ref={fadeDownRef}>
-                    <div className="text-6xl text-white/20 font-bold mb-2">
+                    <div className="text-6xl text-white/50 font-bold mb-2">
                         {slide.id}
                     </div>
                     <h3 className="text-xl text-white font-semibold mb-2">

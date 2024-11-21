@@ -40,7 +40,7 @@ export default function Shell() {
         <div className="min-h-screen bg-white flex justify-center flex-col overflow-x-hidden">
 
             {/* Hero Section */}
-            <div className="relative h-[50vh] md:h-[50vh] lg:h-[60vh] container mx-auto bg-white ">
+            <div className="relative h-[30vh] md:h-[50vh] lg:h-[60vh] container mx-auto bg-white ">
                 <div className="overflow-hidden rounded-b-[100px] bg-white bg-cover bg-no-repeat">
                     <Image
                         src="/images/banner.jpeg"
@@ -78,7 +78,7 @@ export default function Shell() {
                         </div>
                         <div className="flex items-right">
                             <p className="text-gray-900 text-bold text-lg max-w-xl mx-auto fade-right" ref={fadeRightRef}>
-                                Our market-led crop diversification initiative builds resilient and profitable farming communities through
+                                Our market-led crop diversification initiative builds resilient and profitable farming communities through <Link href="/contract-farming" className='text-[#16A34A]'>contract farming</Link>
                             </p>
                         </div>
 
