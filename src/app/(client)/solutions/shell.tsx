@@ -41,16 +41,13 @@ export default function Shell() {
 
             {/* Hero Section */}
             <div className="relative h-[30vh] md:h-[50vh] lg:h-[60vh] container mx-auto bg-white ">
-                <div className="overflow-hidden rounded-b-[100px] bg-white bg-cover bg-no-repeat">
+                <div className="overflow-hidden rounded-b-[50px] lg:rounded-b-[100px] bg-white bg-cover bg-no-repeat">
                     <Image
                         src="/images/banner.jpeg"
                         alt="Farmers in field"
                         fill
-                        className="object-cover transition duration-300 ease-in-out hover:scale-110"
-                        style={{
-                            borderBottomLeftRadius: '100px',
-                            borderBottomRightRadius: '100px',
-                        }}
+                        className="object-cover transition duration-300 ease-in-out hover:scale-110 rounded-b-[50px] lg:rounded-b-[100px]"
+                      
                     />
                 </div>
 
@@ -85,7 +82,7 @@ export default function Shell() {
                     </div>
                 </div>
                 <div className="container mx-auto  flex justify-center items-center">
-                    <div className="w-full lg:w-[80%]">
+                    <div className="w-full lg:w-[80%] px-2">
                         {/* Carousel */}
                         <CustomCarousel slides={slides} />
 

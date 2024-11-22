@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import Image from "next/image";
 import SolutionCard from "./SolutionCard";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CustomCarousel = ({ slides }: any) => {
     const settings = {
@@ -11,8 +11,8 @@ const CustomCarousel = ({ slides }: any) => {
         centerMode: true,
         centerPadding: "0px", // No extra padding for perfect centering
         autoplaySpeed: 5000,
-        arrows: true,
-        dots: false,
+        arrows: true, // Default state (visible on desktop)
+        dots: false, // Default state (hidden on desktop)
         responsive: [
             {
                 breakpoint: 1024,
@@ -20,53 +20,56 @@ const CustomCarousel = ({ slides }: any) => {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     centerPadding: "0px",
-                }
+                    arrows: true, // Still showing arrows for tablets
+                    dots: false, // Still no dots for tablets
+                },
             },
             {
-                breakpoint: 765,
+                breakpoint: 765, // Mobile breakpoint
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerPadding: "0px",
-                }
-            }
+                    arrows: false, // Hide arrows on mobile
+                    dots: true, // Show dots on mobile
+                },
+            },
         ],
-        nextArrow: <CustomArrow />,
-        prevArrow: <CustomArrow />,
+        nextArrow: <CustomRightArrow />,
+        prevArrow: <CustomLeftArrow />,
     };
 
     return (
-        <div className="relative w-full max-w-screen-xl mx-auto px-6">
+        <div className="relative w-full mx-auto">
             <Slider {...settings}>
                 {slides.map((slide: any, index: number) => (
-                    <SolutionCard key={index} slide={slide}/>
+                    <SolutionCard key={index} slide={slide} />
                 ))}
             </Slider>
         </div>
     );
 };
 
-// Custom arrow component for the next/prev buttons
-const CustomArrow = ({ className, style, onClick }: any) => (
+// Custom arrow component for the next button
+const CustomRightArrow = ({ className, style, onClick }: any) => (
     <div
-        className={className}
-        style={{
-            ...style,
-            backgroundColor: "green",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "absolute",
-            zIndex: 10,
-            top: "50%",
-            transform: "translateY(-50%)",
-        }}
+        className={`${className} absolute font-bold right-1 lg:relative`}
+        style={{ ...style, zIndex: 99, color: "#16A34A" }} // Ensure proper layering
         onClick={onClick}
-    />
+    >
+        <ChevronRight size={44} />
+    </div>
+);
+
+// Custom arrow component for the previous button
+const CustomLeftArrow = ({ className, style, onClick }: any) => (
+    <div
+        className={`${className} absolute font-bold left-1 lg:relative`}
+        style={{ ...style, zIndex: 99, color: "#16A34A" }} // Ensure proper layering
+        onClick={onClick}
+    >
+        <ChevronLeft size={44} />
+    </div>
 );
 
 export default CustomCarousel;

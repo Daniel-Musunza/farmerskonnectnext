@@ -231,3 +231,28 @@ body {
     opacity: 1 !important;
     transform: translateX(0) !important;
 }
+/* Custom styles for dots */
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    background-color: #85e7a9; /* Light green background */
+}
+
+.slick-dots li.slick-active {
+    background-color: #16A34A; /* Green for active dot */
+}
+
+.slick-dots li button {
+    width: 100%; /* Ensure button covers the dot area */
+    height: 100%;
+    opacity: 0; /* Hide the button content */
+}
+
+.slick-dots li button:before {
+    display: none; /* Completely hide the pseudo-element */
+}
