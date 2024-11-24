@@ -10,7 +10,7 @@ export default function SlideCaption() {
         logo: "/images/canolalogo.png",
         caption: "ONGOING CONTRACT",
         title: "MERU 40 HECTARES",
-        mission: "Making sure there is enough supply of oil in the country"
+        mission: "🌱 Transforming Farming through contract Farming for Oil crops 🌱"
     }
 
     return (
