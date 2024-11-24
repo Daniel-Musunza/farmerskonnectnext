@@ -155,7 +155,7 @@ const Blogs = ({ blogs }: any) => {
     <div className="overflow-hidden w-full p-[20px] mt-[20px] lg:mt-[50px] md:w-[80%] mx-auto flex justify-center">
       <div className="relative w-full fade-left" ref={fadeLeftRef}>
         <div className="flex justify-center items-center w-full uppercase">
-          <Title order={2} py="md">Discover our latest trending blogs</Title>
+          <Title order={2} py="md" className="text-center">Discover our latest trending blogs</Title>
         </div>
 
         <Carousel
@@ -278,9 +278,9 @@ export default function HomeShell({ blogs }: any) {
         </div>
         <div className="company-stats">
           <div className="flex flex-wrap gap-2 h-[260px]">
-            <StatBox finalValue={113} label="Apartments Sold" number={0} />
+            <StatBox finalValue={113} label="Contracts Done" number={0} />
             <StatBox finalValue={355} label="Satisfied Clients" number={2} />
-            <StatBox finalValue={718} label="Units Rented" number={3} />
+            <StatBox finalValue={718} label="Land Leased" number={3} />
             <StatBox finalValue={54} label="Listed Units" number={4} />
           </div>
         </div>
