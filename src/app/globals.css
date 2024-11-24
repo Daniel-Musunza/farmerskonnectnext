@@ -361,7 +361,7 @@ iframe {
 .btn-ghost {
     padding: 10px 20px;
     width: 200px;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     border: 1px solid #232323;
     background-color: #fff;
     color: #232323;

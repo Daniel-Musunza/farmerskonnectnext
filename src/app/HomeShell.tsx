@@ -51,7 +51,7 @@ const LandToLease = () => {
           <div className="lg:mb-12">
             <Link
               href="/listings"
-              className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition uppercase rounded-[50px]"
+              className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition uppercase rounded-sm"
             >
               View All Lands
             </Link>
@@ -130,7 +130,7 @@ const LandToLease = () => {
         <div className="mb-12 flex lg:hidden justify-center">
           <Link
             href="/listings"
-            className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold uppercase hover:bg-green-900 transition rounded-[50px]"
+            className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold uppercase hover:bg-green-900 transition rounded-sm"
           >
             View All Lands
           </Link>
@@ -273,7 +273,7 @@ export default function HomeShell({ blogs }: any) {
               committed to deliver value through a combination of different methodologies.
             </p>
             <p>We’re committed to revolutionizing agriculture by bridging the gap between farmers and markets through our innovative Canola Contract Farming Module. Our approach ensures that farmers reap the full benefits of their hard work while providing buyers with a consistent supply of premium canola oil.</p>
-            <a href="tel:+254703363464" className="contact-button fade-right" ref={fadeRightRef}>Contact Us →</a>
+            <a href="tel:+254703363464" className="contact-button fade-right rounded-sm" ref={fadeRightRef}>Contact Us →</a>
           </div>
         </div>
         <div className="company-stats">
@@ -281,7 +281,7 @@ export default function HomeShell({ blogs }: any) {
             <StatBox finalValue={113} label="Contracts Done" number={0} />
             <StatBox finalValue={355} label="Satisfied Clients" number={2} />
             <StatBox finalValue={718} label="Land Leased" number={3} />
-            <StatBox finalValue={54} label="Listed Units" number={4} />
+            <StatBox finalValue={54} label="Available listings" number={4} />
           </div>
         </div>
       </section>

@@ -31,9 +31,9 @@ export default function SlideCaption() {
             </div>
             <h2 className="flex flex-wrap">{currentSlide.title}</h2>
             {/* <h2 style={{ color: "#FF6922" }} className="">Living Experience</h2> */}
-            <p className="mb-2">{currentSlide.mission}</p>
+            <p className="mb-2 ">{currentSlide.mission}</p>
             <Link href={`/listings/${currentSlide.id}`}>
-                <span className="btn btn-ghost ">Learn More</span>
+                <span className="btn btn-ghost rounded-sm">Learn More</span>
             </Link>
         </div>
     )
