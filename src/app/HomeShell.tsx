@@ -22,8 +22,8 @@ const LandToLease = () => {
   const fadeDownRef = useIntersectionObserver({ threshold: 0.1 });
 
   const lands = [
-    { title: 'LAND IN NYALI | IDEAL FOR COMMERCIAL USE', img: '/images/land3.webp' },
-    { title: 'SPACIOUS LAND IN DIANI | PRIME LOCATION', img: '/images/land2.webp' },
+    { title: 'LAND IN NYERI | IDEAL FOR COMMERCIAL USE', img: '/images/land3.webp' },
+    { title: 'SPACIOUS LAND IN MERU | PRIME LOCATION', img: '/images/land2.webp' },
     { title: 'AGRICULTURAL LAND IN KILIFI | FERTILE SOIL', img: '/images/land1.jpg' },
   ];
 
@@ -36,7 +36,7 @@ const LandToLease = () => {
         <div className="flex flex-col gap-2 w-full lg:w-[35%] lg:my-auto">
           {/* Section Title */}
           <div className="mb-6 lg:mb-12 flex gap-1 items-center">
-            <h2 className="text-sm text-gray-400 tracking-widest uppercase mb-2"> LAND OPPORTUNITIES</h2>
+            <h2 className="text-sm text-gray-400 tracking-widest uppercase mb-2"> LANDS FOR LEASING</h2>
             <div className="h-0.5 bg-gray-300 w-[100px]" />
           </div>
 
@@ -51,7 +51,7 @@ const LandToLease = () => {
           <div className="lg:mb-12">
             <Link
               href="/listings"
-              className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-[50px]"
+              className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition uppercase rounded-[50px]"
             >
               View All Lands
             </Link>
@@ -130,7 +130,7 @@ const LandToLease = () => {
         <div className="mb-12 flex lg:hidden justify-center">
           <Link
             href="/listings"
-            className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-[50px]"
+            className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold uppercase hover:bg-green-900 transition rounded-[50px]"
           >
             View All Lands
           </Link>
@@ -168,13 +168,13 @@ const Blogs = ({ blogs }: any) => {
               height: "fit-content"
             },
             control: {
-              backgroundColor: 'white',  // Change background color of side buttons
-              color: 'black',  // Change arrow color
+              backgroundColor: '#16A34A',  // Change background color of side buttons
+              color: 'white',  // Change arrow color
               borderRadius: '50%',  // Make buttons circular
               width: 40,  // Set width of the buttons
               height: 40,  // Set height of the buttons
               '&:hover': {
-                backgroundColor: 'grey',  // Change background color on hover
+                backgroundColor: 'green',  // Change background color on hover
               },
             },
           }}
@@ -194,7 +194,7 @@ const Blogs = ({ blogs }: any) => {
                   placeholder="blur"
                   blurDataURL="/images/blur.avif"
                   loading='eager'
-                  className="w-full lg:w-[317px] h-[250px] object-cover z-5 transition duration-300 ease-in-out hover:scale-110"
+                  className="w-full lg:w-[317px] h-[250px] object-cover z-5 transition duration-300 ease-in-out hover:scale-110 rounded-t-[50px]"
                   style={{ objectPosition: '50% 50%' }}
                 />
 
@@ -207,7 +207,7 @@ const Blogs = ({ blogs }: any) => {
                   <div className="w-full flex justify-center">
                     <Link
                       href={`/blogs/${property.id}`}
-                      className="bg-gray-800 text-white py-3 px-8 text-sm font-semibold hover:bg-gray-900 transitionc lg:block"
+                      className="bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transitionc lg:block rounded-[50px]"
                     >
                       {clientText || '...'}
                     </Link>
@@ -255,9 +255,13 @@ export default function HomeShell({ blogs }: any) {
         </div>
       </section>
 
+
+
+      <LandToLease />
+
       <section className=" company-section relative  p-[20px]  h-fit mt-[20px] lg:mt-[50px] w-full md:w-[80%] mx-auto flex no-wrap">
         <div className="company-content">
-          <div className="company-image overflow-hidden bg-cover bg-no-repeat">
+          <div className="company-image overflow-hidden bg-cover bg-no-repeat flex justify-center items-center">
             <img src={companyImage}
               alt="Property Image "
               className="transition duration-300 ease-in-out hover:scale-110" />
@@ -281,10 +285,6 @@ export default function HomeShell({ blogs }: any) {
           </div>
         </div>
       </section>
-
-      <LandToLease />
-
-
 
       <Blogs blogs={blogs} />
 
