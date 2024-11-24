@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import SolutionCard from "./SolutionCard";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const CustomCarousel = ({ slides }: any) => {
+const CustomCarousel = ({ cards }: any) => {
     const settings = {
         infinite: true,
         slidesToShow: 3,
@@ -42,9 +42,7 @@ const CustomCarousel = ({ slides }: any) => {
     return (
         <div className="relative w-full mx-auto">
             <Slider {...settings}>
-                {slides.map((slide: any, index: number) => (
-                    <SolutionCard key={index} slide={slide} />
-                ))}
+             {cards}
             </Slider>
         </div>
     );

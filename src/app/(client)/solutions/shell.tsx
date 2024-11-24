@@ -8,12 +8,13 @@ import { Carousel } from '@mantine/carousel'
 import { Container, Title } from '@mantine/core'
 import CustomCarousel from '@/components/CustomCarousel'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+import SolutionCard from "@/components/SolutionCard";
 
 export default function Shell() {
 
     const fadeLeftRef = useIntersectionObserver({ threshold: 0.1 });
     const fadeRightRef = useIntersectionObserver({ threshold: 0.1 });
-    
+
     const slides = [
         {
             id: 1,
@@ -35,6 +36,9 @@ export default function Shell() {
         }
     ]
 
+    const cards = slides.map((slide: any, index: number) => (
+        <SolutionCard key={index} slide={slide} />
+    ))
 
     return (
         <div className="min-h-screen bg-white flex justify-center flex-col overflow-x-hidden">
@@ -47,7 +51,7 @@ export default function Shell() {
                         alt="Farmers in field"
                         fill
                         className="object-cover transition duration-300 ease-in-out hover:scale-110 rounded-b-[50px] lg:rounded-b-[100px]"
-                      
+
                     />
                 </div>
 
@@ -84,7 +88,7 @@ export default function Shell() {
                 <div className="container mx-auto  flex justify-center items-center">
                     <div className="w-full lg:w-[80%] px-2">
                         {/* Carousel */}
-                        <CustomCarousel slides={slides} />
+                        <CustomCarousel cards={cards} />
 
                     </div>
                 </div>

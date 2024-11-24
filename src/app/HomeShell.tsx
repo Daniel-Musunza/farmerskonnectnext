@@ -13,6 +13,7 @@ import SlideCaption from "@/components/SlideCaption";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { buttonText } from "@/utils/buttonText";
 import { StatBox } from "@/components/StatBox";
+import CustomCarousel from "@/components/CustomCarousel";
 
 const companyImage = '/images/canolawithoil.webp';
 
@@ -40,7 +41,7 @@ const LandToLease = () => {
             <div className="h-0.5 bg-gray-300 w-[100px]" />
           </div>
 
-          <h1 className="text-[38px]">EXPLORE LANDS TO LEASE</h1>
+          <h1 className="text-[38px] ">EXPLORE LANDS TO LEASE</h1>
 
           {/* Description */}
           <p className="text-[14px] text-gray-600 mb-6 max-w-xl">
@@ -48,12 +49,12 @@ const LandToLease = () => {
           </p>
 
           {/* Button */}
-          <div className="lg:mb-12">
+          <div className="lg:mb-12 hidden lg:flex">
             <Link
               href="/listings"
               className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transition uppercase rounded-sm"
             >
-              View All Lands
+              View All Lands listings
             </Link>
           </div>
         </div>
@@ -130,9 +131,9 @@ const LandToLease = () => {
         <div className="mb-12 flex lg:hidden justify-center">
           <Link
             href="/listings"
-            className="w-fit bg-green-800 text-white py-3 px-8 text-sm font-semibold uppercase hover:bg-green-900 transition rounded-sm"
+            className="w-fit lg:hidden flex bg-green-800 text-white py-3 px-8 text-sm font-semibold uppercase hover:bg-green-900 transition rounded-sm"
           >
-            View All Lands
+            View All Lands listings
           </Link>
         </div>
       </div>
@@ -151,73 +152,53 @@ const Blogs = ({ blogs }: any) => {
     setClientText(buttonText());  // Set random text only on the client.
   }, []);
 
-  return (
-    <div className="overflow-hidden w-full p-[20px] mt-[20px] lg:mt-[50px] md:w-[80%] mx-auto flex justify-center">
-      <div className="relative w-full fade-left" ref={fadeLeftRef}>
-        <div className="flex justify-center items-center w-full uppercase">
-          <Title order={2} py="md" className="text-center">Discover our latest trending blogs</Title>
+  const cards = blogs.map((property: any) => (
+    <div className="bg-white text-center h-[500px] flex items-center justify-center lg:ml-[15px] px-5 mx-auto flex-col  overflow-hidden bg-cover bg-no-repeat"  > {/* Center card */}
+      {/* Image */}
+      <Image
+        src={property.img}
+        alt={property.title}
+        width={317}
+        height={250}
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 65vw"
+        placeholder="blur"
+        blurDataURL="/images/blur.avif"
+        loading='eager'
+        className="w-full  h-[250px] object-cover z-5 transition duration-300 ease-in-out hover:scale-110 rounded-sm"
+        style={{ objectPosition: '50% 50%' }}
+      />
+
+      {/* Content */}
+      <div className="p-6">
+        <h2 className="text-[27px] uppercase">{property.title}</h2>
+        <p className="text-gray-600 mb-6 text-[14px]">{property.description}</p>
+
+        {/* Button */}
+        <div className="w-full flex justify-center">
+          <Link
+            href={`/blogs/${property.id}`}
+            className="bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transitionc lg:block rounded-sm"
+          >
+            {clientText || '...'}
+          </Link>
         </div>
+      </div>
+    </div>
+  ))
 
-        <Carousel
-          slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
-          slideGap={{ base: 0, sm: 'md' }}
-          loop
-          align="start"
-          styles={{
-            root: {
-              height: "fit-content"
-            },
-            control: {
-              backgroundColor: '#16A34A',  // Change background color of side buttons
-              color: 'white',  // Change arrow color
-              borderRadius: '50%',  // Make buttons circular
-              width: 40,  // Set width of the buttons
-              height: 40,  // Set height of the buttons
-              '&:hover': {
-                backgroundColor: 'green',  // Change background color on hover
-              },
-            },
-          }}
+  return (
+    <div className='container mx-auto px-6 flex flex-col justify-center mb-[200px]'>
+      <div className="container mx-auto  flex justify-center items-center">
+        <div className="w-full lg:w-[80%] px-2">
+          <div className="relative w-full fade-left" ref={fadeLeftRef}>
+            <div className="flex justify-center items-center w-full uppercase">
+              <Title order={2} py="md" className="text-center">Discover our latest trending blogs</Title>
+            </div>
 
-        >
-          {blogs.map((property: any, index: number) => (
-            <Carousel.Slide key={index}>
-              <div className="bg-white text-center w-[100vw] h-[500px] lg:w-[317px] mx-auto flex flex-col justify-between overflow-hidden bg-cover bg-no-repeat"  > {/* Center card */}
-                {/* Image */}
-                <Image
-                  src={property.img}
-                  alt={property.title}
-                  width={317}
-                  height={250}
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 65vw"
-                  placeholder="blur"
-                  blurDataURL="/images/blur.avif"
-                  loading='eager'
-                  className="w-full lg:w-[317px] h-[250px] object-cover z-5 transition duration-300 ease-in-out hover:scale-110 rounded-t-[50px]"
-                  style={{ objectPosition: '50% 50%' }}
-                />
-
-                {/* Content */}
-                <div className="p-6">
-                  <h2 className="text-[27px] uppercase">{property.title}</h2>
-                  <p className="text-gray-600 mb-6 text-[14px]">{property.description}</p>
-
-                  {/* Button */}
-                  <div className="w-full flex justify-center">
-                    <Link
-                      href={`/blogs/${property.id}`}
-                      className="bg-green-800 text-white py-3 px-8 text-sm font-semibold hover:bg-green-900 transitionc lg:block rounded-[50px]"
-                    >
-                      {clientText || '...'}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </Carousel.Slide>
-          ))}
-
-        </Carousel>
+            <CustomCarousel cards={cards} />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -269,10 +250,9 @@ export default function HomeShell({ blogs }: any) {
           <div className="company-description">
             <h2>Farmers' Konnect</h2>
             <p>Farmers' Konnect is a dynamic company specializing in transforming Farming through contract Farming for Oil crops as well as providing access to available lands for lease.
-              We have a team of dedicated and experienced professionals who are ready and
-              committed to deliver value through a combination of different methodologies.
+            We’re committed to revolutionizing agriculture by bridging the gap between farmers and markets through our innovative Canola Contract Farming Module.
             </p>
-            <p>We’re committed to revolutionizing agriculture by bridging the gap between farmers and markets through our innovative Canola Contract Farming Module. Our approach ensures that farmers reap the full benefits of their hard work while providing buyers with a consistent supply of premium canola oil.</p>
+            <p> Our approach ensures that farmers reap the full benefits of their hard work while providing buyers with a consistent supply of premium canola oil.</p>
             <a href="tel:+254703363464" className="contact-button fade-right rounded-sm" ref={fadeRightRef}>Contact Us →</a>
           </div>
         </div>
