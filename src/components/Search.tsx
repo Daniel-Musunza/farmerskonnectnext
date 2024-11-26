@@ -107,8 +107,8 @@ export default function Search() {
                                     <Accordion.Item value="1">
                                         <Accordion.Control className="custom-accordion-control">
                                             <div className="flex flex-col gap-2">
-                                                <Title order={4} className='flex items-center gap-2'>PROPERTY TYPES </Title>
-                                                <span className={selectedPropertyType.length > 0 ? `text-[#FF6922]` : ""}>{selectedPropertyType.length > 0 ? selectedPropertyType.length + " Property types" : "Any"}</span>
+                                                <Title order={4} className='flex items-center gap-2'>SEARCH TYPE </Title>
+                                                <span className={selectedPropertyType.length > 0 ? `text-[#16A34A]` : ""}>{selectedPropertyType.length > 0 ? selectedPropertyType.length + " Search type(s)" : "Any"}</span>
 
                                             </div>
 
@@ -121,66 +121,25 @@ export default function Search() {
                                                         <div className="relative flex flex-col gap-4">
                                                             <div className="flex flex-col">
                                                                 <Checkbox
-                                                                    checked={selectedPropertyType.includes("Apartment")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Apartment", e.target.checked)}
-                                                                    label="Apartment"
-                                                                    color="#FF6922"
+                                                                    checked={selectedPropertyType.includes("lease")}
+                                                                    onChange={(e) => handlePropertyTypeChange("lease", e.target.checked)}
+                                                                    label="LAND TO LEASE"
+                                                                    color="#16A34A"
                                                                     c="black"
                                                                     size="md"
                                                                 />
                                                             </div>
-
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedPropertyType.includes("Hotel")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Hotel", e.target.checked)}
-                                                                    label="Hotel"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedPropertyType.includes("Office")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Office", e.target.checked)}
-                                                                    label="Office"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-
                                                             <div className="flex flex-col ">
                                                                 <Checkbox
-                                                                    checked={selectedPropertyType.includes("Plot")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Plot", e.target.checked)}
-                                                                    label="Plot"
-                                                                    color="#FF6922"
+                                                                    checked={selectedPropertyType.includes("invest")}
+                                                                    onChange={(e) => handlePropertyTypeChange("invest", e.target.checked)}
+                                                                    label="LAND TO INVEST IN"
+                                                                    color="#16A34A"
                                                                     c="black"
                                                                     size="md"
                                                                 />
                                                             </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedPropertyType.includes("Town House")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Town House", e.target.checked)}
-                                                                    label="Town House"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedPropertyType.includes("Villa")}
-                                                                    onChange={(e) => handlePropertyTypeChange("Villa", e.target.checked)}
-                                                                    label="Villa"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -192,86 +151,12 @@ export default function Search() {
                                             </Flex>
                                         </Accordion.Panel>
                                     </Accordion.Item>
-                                    <Accordion.Item value="2">
-                                        <Accordion.Control className="custom-accordion-control">
-                                            <div className="flex flex-col gap-2">
-                                                <Title order={4} className='flex items-center gap-2'>BEDROOMS </Title>
-                                                <span className={selectedBedrooms.length > 0 ? `text-[#FF6922]` : ""}>{selectedBedrooms.length > 0 ? selectedBedrooms.join(", ") + " Bedrooms" : "Any"}</span>
 
-                                            </div>
-
-                                        </Accordion.Control>
-                                        <Accordion.Panel>
-                                            <Flex direction="column" gap="xs" >
-                                                <div className="flex gap-2 w-full flex-col">
-                                                    <div className="w-full  relative p-2">
-                                                        <div className="relative flex flex-col gap-4">
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedBedrooms.includes("1")}
-                                                                    onChange={(e) => handleBedroomsChange("1", e.target.checked)}
-                                                                    label="1 Bedroom"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedBedrooms.includes("2")}
-                                                                    onChange={(e) => handleBedroomsChange("2", e.target.checked)}
-                                                                    label="2 Bedroom"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedBedrooms.includes("3")}
-                                                                    onChange={(e) => handleBedroomsChange("3", e.target.checked)}
-                                                                    label="3 Bedroom"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedBedrooms.includes("4")}
-                                                                    onChange={(e) => handleBedroomsChange("4", e.target.checked)}
-                                                                    label="4 Bedroom"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <Checkbox
-                                                                    checked={selectedBedrooms.includes("5")}
-                                                                    onChange={(e) => handleBedroomsChange("5", e.target.checked)}
-                                                                    label="5 Bedroom"
-                                                                    color="#FF6922"
-                                                                    c="black"
-                                                                    size="md"
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="h-[50px] cursor-pointer" onClick={handleBedroomsClear}>
-                                                    <hr />
-                                                    <h3 className="p-4">CLEAR SELECTION</h3>
-                                                </div>
-                                            </Flex>
-                                        </Accordion.Panel>
-                                    </Accordion.Item>
                                     <Accordion.Item value="3">
                                         <Accordion.Control className="custom-accordion-control">
                                             <div className="flex flex-col gap-2">
                                                 <Title order={4} className='flex items-center gap-2'>PRICE RANGE (KSH) </Title>
-                                                <span className={(selectedLowestPrice || selectedHighestPrice) ? "text-[#FF6922]" : ""}>
+                                                <span className={(selectedLowestPrice || selectedHighestPrice) ? "text-[#16A34A]" : ""}>
                                                     {(selectedLowestPrice || selectedHighestPrice) ? `KSH ${selectedLowestPrice ? formatNumberWithCommas(selectedLowestPrice) : ""} - ${selectedHighestPrice ? formatNumberWithCommas(selectedHighestPrice) : ""}` : "Any"}
                                                 </span>
                                             </div>
@@ -282,7 +167,7 @@ export default function Search() {
                                                 <div className="flex gap-2 w-full flex-col">
                                                     {/* Min Price Selector */}
                                                     <div className="w-full relative p-2">
-                                                        <h3 style={{ color: "#FF6922" }}>Min Price (KSH)</h3>
+                                                        <h3 style={{ color: "#16A34A" }}>Min Price (KSH)</h3>
                                                         <div className="relative flex mt-4">
                                                             <select
                                                                 name="min-price"
@@ -310,7 +195,7 @@ export default function Search() {
 
                                                     {/* Max Price Selector */}
                                                     <div className="w-full relative p-2">
-                                                        <h3 style={{ color: "#FF6922" }}>Max Price (KSH)</h3>
+                                                        <h3 style={{ color: "#16A34A" }}>Max Price (KSH)</h3>
                                                         <div className="relative flex mt-4">
                                                             <select
                                                                 name="max-price"
@@ -358,7 +243,7 @@ export default function Search() {
                                         <Accordion.Control className="custom-accordion-control">
                                             <div className="flex flex-col gap-2">
                                                 <Title order={4} className='flex items-center gap-2'>LOCATION</Title>
-                                                <span className={selectedLocations.length > 0 ? `text-[#FF6922]` : ""}>{selectedLocations.length > 0 ? selectedLocations.length + " Locations" : "All Locations"}</span>
+                                                <span className={selectedLocations.length > 0 ? `text-[#16A34A]` : ""}>{selectedLocations.length > 0 ? selectedLocations.length + " Locations" : "All Locations"}</span>
 
                                             </div>
 
@@ -367,45 +252,45 @@ export default function Search() {
                                             <Flex direction="column" gap="xs" >
                                                 <div className="relative flex gap-2 flex-col">
                                                     <div className="w-full  relative p-2">
-                                                        <h3 style={{ color: "#FF6922" }}>FEATURED LOCATIONS</h3>
+                                                        <h3 style={{ color: "#16A34A" }}>FEATURED LOCATIONS</h3>
                                                         <div className="relative flex flex-col mt-4 gap-4">
                                                             <div className="w-full flex flex-col justify-start gap-4">
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Mombasa CBD")}
-                                                                        onChange={(e) => handleLocationsChange("Mombasa CBD", e.target.checked)}
-                                                                        label="Mombasa CBD"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Kilifi, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Kilifi, Kenya", e.target.checked)}
+                                                                        label="Kilifi, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
                                                                 </div>
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Nyali, Mombasa")}
-                                                                        onChange={(e) => handleLocationsChange("Nyali, Mombasa", e.target.checked)}
-                                                                        label="Nyali, Mombasa"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Nyeri, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Nyeri, Kenya", e.target.checked)}
+                                                                        label="Nyeri, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
                                                                 </div>
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Tudor, Mombasa")}
-                                                                        onChange={(e) => handleLocationsChange("Tudor, Mombasa", e.target.checked)}
-                                                                        label="Tudor, Mombasa"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Nyandarua, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Nyandarua, Kenya", e.target.checked)}
+                                                                        label="Nyandarua, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
                                                                 </div>
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Bamburi, Mombasa")}
-                                                                        onChange={(e) => handleLocationsChange("Bamburi, Mombasa", e.target.checked)}
-                                                                        label="Bamburi, Mombasa"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Murang'a, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Murang'a, Kenya", e.target.checked)}
+                                                                        label="Murang'a, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
@@ -413,30 +298,30 @@ export default function Search() {
 
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Mtwapa, Kilifi")}
-                                                                        onChange={(e) => handleLocationsChange("Mtwapa, Kilifi", e.target.checked)}
-                                                                        label="Mtwapa, Kilifi"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Meru, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Meru, Kenya", e.target.checked)}
+                                                                        label="Meru, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
                                                                 </div>
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Kilifi Town")}
-                                                                        onChange={(e) => handleLocationsChange("Kilifi Town", e.target.checked)}
-                                                                        label="Kilifi Town"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Kisii, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Kisii, Kenya", e.target.checked)}
+                                                                        label="Kisii, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
                                                                 </div>
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Ukunda, Kwale")}
-                                                                        onChange={(e) => handleLocationsChange("Ukunda, Kwale", e.target.checked)}
-                                                                        label="Ukunda, Kwale"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Machakos, Kenya")}
+                                                                        onChange={(e) => handleLocationsChange("Machakos, Kenya", e.target.checked)}
+                                                                        label="Machakos, Kenya"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
@@ -445,15 +330,15 @@ export default function Search() {
                                                         </div>
                                                     </div>
                                                     <div className="w-full relative p-2">
-                                                        <h3 style={{ color: "#FF6922" }}>MORE LOCATIONS</h3>
+                                                        <h3 style={{ color: "#16A34A" }}>MORE LOCATIONS</h3>
                                                         <div className="relative flex flex-col  mt-4 ">
                                                             <div className="w-full  flex flex-col justify-start gap-4">
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Nairobi")}
-                                                                        onChange={(e) => handleLocationsChange("Nairobi", e.target.checked)}
-                                                                        label="Nairobi"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("Tanzania")}
+                                                                        onChange={(e) => handleLocationsChange("Tanzania", e.target.checked)}
+                                                                        label="Tanzania"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
@@ -461,10 +346,10 @@ export default function Search() {
 
                                                                 <div className="flex flex-col">
                                                                     <Checkbox
-                                                                        checked={selectedLocations.includes("Nakuru")}
-                                                                        onChange={(e) => handleLocationsChange("Nakuru", e.target.checked)}
-                                                                        label="Nakuru"
-                                                                        color="#FF6922"
+                                                                        checked={selectedLocations.includes("DRC (Congo)")}
+                                                                        onChange={(e) => handleLocationsChange("DRC (Congo)", e.target.checked)}
+                                                                        label="DRC (Congo)"
+                                                                        color="#16A34A"
                                                                         c="black"
                                                                         size="md"
                                                                     />
@@ -486,7 +371,7 @@ export default function Search() {
 
 
                             <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2 flex justify-center items-center" onClick={handleSearch}>
-                                <button className="bg-slate-400 w-full lg:w-[80%] py-4 rounded-sm cursor-pointer">SEARCH</button>
+                                <button className="bg-green-800 text-white w-full lg:w-[80%] py-4 rounded-sm cursor-pointer">SEARCH</button>
                             </div>
                             <style jsx>{`
                 .custom-accordion-control:hover {
@@ -520,93 +405,54 @@ export default function Search() {
                     style={{ zIndex: 3 }}
                 >
 
-                    <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2">
+                    <div className="rounded-sm w-[100%] lg:w-[25%] h-full p-2">
                         <Popover
                             position="bottom"
                             shadow="md"
-                            width="350px"
+                            width="450px"
 
                         >
                             <Popover.Target>
                                 <div className="flex flex-col gap-2 cursor-pointer">
-                                    <h2 className="font-bold">PROPERTY TYPES</h2>
+                                    <h2 className="font-bold">SEARCH TYPE</h2>
                                     <div className="flex justify-between">
-                                        <span className={selectedPropertyType.length > 0 ? `text-[#FF6922]` : ""}>{selectedPropertyType.length > 0 ? selectedPropertyType.length + " Property types" : "Any"}</span>
+                                        <span className={selectedPropertyType.length > 0 ? `text-[#16A34A]` : ""}>{selectedPropertyType.length > 0 ? selectedPropertyType.length + " Search type(s)" : "Any"}</span>
                                         <span><FontAwesomeIcon icon={faAngleDown} /></span>
                                     </div>
                                 </div>
                             </Popover.Target>
 
                             <Popover.Dropdown>
-                                <div className="relative bg-white rounded-sm p-2 h-fit  lg:h-[300px]  flex flex-col justify-between">
+                                <div className="relative bg-white rounded-sm p-2 h-fit  lg:h-[150px]  flex flex-col justify-between">
                                     <div className="flex gap-2">
                                         <div className="w-full lg:w-[50%] relative p-2">
                                             <div className="relative flex flex-col gap-4">
                                                 <div className="flex flex-col">
                                                     <Checkbox
-                                                        checked={selectedPropertyType.includes("Apartment")}
-                                                        onChange={(e) => handlePropertyTypeChange("Apartment", e.target.checked)}
-                                                        label="Apartment"
-                                                        color="#FF6922"
+                                                        checked={selectedPropertyType.includes("lease")}
+                                                        onChange={(e) => handlePropertyTypeChange("lease", e.target.checked)}
+                                                        label="LAND TO LEASE"
+                                                        color="#16A34A"
                                                         c="black"
                                                         size="md"
                                                     />
                                                 </div>
 
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedPropertyType.includes("Hotel")}
-                                                        onChange={(e) => handlePropertyTypeChange("Hotel", e.target.checked)}
-                                                        label="Hotel"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedPropertyType.includes("Office")}
-                                                        onChange={(e) => handlePropertyTypeChange("Office", e.target.checked)}
-                                                        label="Office"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
                                             </div>
                                         </div>
                                         <div className="w-full lg:w-[50%] relative p-2">
                                             <div className="relative flex flex-col gap-4">
                                                 <div className="flex flex-col ">
                                                     <Checkbox
-                                                        checked={selectedPropertyType.includes("Plot")}
-                                                        onChange={(e) => handlePropertyTypeChange("Plot", e.target.checked)}
-                                                        label="Plot"
-                                                        color="#FF6922"
+                                                        checked={selectedPropertyType.includes("invest")}
+                                                        onChange={(e) => handlePropertyTypeChange("invest", e.target.checked)}
+                                                        label="LAND TO INVEST IN"
+                                                        color="#16A34A"
                                                         c="black"
                                                         size="md"
                                                     />
                                                 </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedPropertyType.includes("Town House")}
-                                                        onChange={(e) => handlePropertyTypeChange("Town House", e.target.checked)}
-                                                        label="Town House"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedPropertyType.includes("Villa")}
-                                                        onChange={(e) => handlePropertyTypeChange("Villa", e.target.checked)}
-                                                        label="Villa"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -619,94 +465,8 @@ export default function Search() {
                         </Popover>
                     </div>
 
-                    <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2">
-                        <Popover
-                            position="bottom"
-                            shadow="md"
-                            width="400px"
-                        >
-                            <Popover.Target>
-                                <div className="flex flex-col gap-2 cursor-pointer">
-                                    <h2 className="font-bold">BEDROOMS</h2>
-                                    <div className="flex justify-between" >
-                                        <span className={selectedBedrooms.length > 0 ? `text-[#FF6922]` : ""}>{selectedBedrooms.length > 0 ? selectedBedrooms.join(", ") + " Bedrooms" : "Any"}</span>
-                                        <span><FontAwesomeIcon icon={fontawesome.faAngleDown} /></span>
-                                    </div>
-                                </div>
-                            </Popover.Target>
 
-                            <Popover.Dropdown>
-                                <div className="relative bg-white rounded-sm p-2  h-fit  lg:h-[300px] flex flex-col justify-between">
-                                    <div className="flex gap-2">
-                                        <div className="w-full lg:w-[50%] relative p-2">
-                                            <div className="relative flex flex-col gap-4">
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedBedrooms.includes("1")}
-                                                        onChange={(e) => handleBedroomsChange("1", e.target.checked)}
-                                                        label="1 Bedroom"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedBedrooms.includes("2")}
-                                                        onChange={(e) => handleBedroomsChange("2", e.target.checked)}
-                                                        label="2 Bedroom"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedBedrooms.includes("3")}
-                                                        onChange={(e) => handleBedroomsChange("3", e.target.checked)}
-                                                        label="3 Bedroom"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="w-full lg:w-[50%] relative p-2">
-                                            <div className="relative flex flex-col gap-4">
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedBedrooms.includes("4")}
-                                                        onChange={(e) => handleBedroomsChange("4", e.target.checked)}
-                                                        label="4 Bedroom"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <Checkbox
-                                                        checked={selectedBedrooms.includes("5")}
-                                                        onChange={(e) => handleBedroomsChange("5", e.target.checked)}
-                                                        label="5 Bedroom"
-                                                        color="#FF6922"
-                                                        c="black"
-                                                        size="md"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="h-[50px] cursor-pointer" onClick={handleBedroomsClear}>
-                                        <hr />
-                                        <h3 className="p-4">CLEAR SELECTION</h3>
-                                    </div>
-                                </div>
-                            </Popover.Dropdown>
-                        </Popover>
-                    </div>
-
-                    <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2">
+                    <div className="rounded-sm w-[100%] lg:w-[25%] h-full p-2">
                         <Popover
                             position="bottom"
                             shadow="md"
@@ -716,7 +476,7 @@ export default function Search() {
                                 <div className="flex flex-col gap-2 cursor-pointer">
                                     <h2 className="font-bold">PRICE RANGE (KSH)</h2>
                                     <div className="flex justify-between">
-                                        <span className={(selectedLowestPrice || selectedHighestPrice) ? "text-[#FF6922]" : ""}>
+                                        <span className={(selectedLowestPrice || selectedHighestPrice) ? "text-[#16A34A]" : ""}>
                                             {(selectedLowestPrice || selectedHighestPrice) ? `KSH ${selectedLowestPrice ? formatNumberWithCommas(selectedLowestPrice) : ""} - ${selectedHighestPrice ? formatNumberWithCommas(selectedHighestPrice) : ""}` : "Any"}
                                         </span>
                                         <span><FontAwesomeIcon icon={fontawesome.faAngleDown} /></span>
@@ -729,7 +489,7 @@ export default function Search() {
                                     <div className="flex gap-2">
                                         {/* Min Price Selector */}
                                         <div className="w-[50%] relative p-2">
-                                            <h3 style={{ color: "#FF6922" }}>Min Price (KSH)</h3>
+                                            <h3 style={{ color: "#16A34A" }}>Min Price (KSH)</h3>
                                             <div className="relative flex mt-4">
                                                 <select
                                                     name="min-price"
@@ -757,7 +517,7 @@ export default function Search() {
 
                                         {/* Max Price Selector */}
                                         <div className="w-[50%] relative p-2">
-                                            <h3 style={{ color: "#FF6922" }}>Max Price (KSH)</h3>
+                                            <h3 style={{ color: "#16A34A" }}>Max Price (KSH)</h3>
                                             <div className="relative flex mt-4">
                                                 <select
                                                     name="max-price"
@@ -802,7 +562,7 @@ export default function Search() {
                         </Popover>
                     </div>
 
-                    <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2">
+                    <div className="rounded-sm w-[100%] lg:w-[25%] h-full p-2">
                         <Popover
                             position="bottom"
                             shadow="md"
@@ -812,7 +572,7 @@ export default function Search() {
                                 <div className="flex flex-col gap-2 cursor-pointer">
                                     <h2 className="font-bold">LOCATION</h2>
                                     <div className="flex justify-between" >
-                                        <span className={selectedLocations.length > 0 ? `text-[#FF6922]` : ""}>{selectedLocations.length > 0 ? selectedLocations.length + " Locations" : "All Locations"}</span>
+                                        <span className={selectedLocations.length > 0 ? `text-[#16A34A]` : ""}>{selectedLocations.length > 0 ? selectedLocations.length + " Locations" : "All Locations"}</span>
                                         <span><FontAwesomeIcon icon={fontawesome.faAngleDown} /></span>
                                     </div>
                                 </div>
@@ -822,45 +582,45 @@ export default function Search() {
                                 <div className="relative bg-white rounded-sm p-2 h-fit  lg:h-[300px] w-full  flex flex-col justify-between">
                                     <div className="relative flex gap-2 flex-col lg:flex-row">
                                         <div className="w-full lg:w-[50%] relative p-2">
-                                            <h3 style={{ color: "#FF6922" }}>FEATURED LOCATIONS</h3>
+                                            <h3 style={{ color: "#16A34A" }}>FEATURED LOCATIONS</h3>
                                             <div className="relative flex flex-col lg:flex-row mt-4">
                                                 <div className="w-full lg:w-[50%] flex flex-col justify-start gap-4">
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Mombasa CBD")}
-                                                            onChange={(e) => handleLocationsChange("Mombasa CBD", e.target.checked)}
-                                                            label="Mombasa CBD"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Kilifi, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Kilifi, Kenya", e.target.checked)}
+                                                            label="Kilifi, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Nyali, Mombasa")}
-                                                            onChange={(e) => handleLocationsChange("Nyali, Mombasa", e.target.checked)}
-                                                            label="Nyali, Mombasa"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Nyeri, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Nyeri, Kenya", e.target.checked)}
+                                                            label="Nyeri, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Tudor, Mombasa")}
-                                                            onChange={(e) => handleLocationsChange("Tudor, Mombasa", e.target.checked)}
-                                                            label="Tudor, Mombasa"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Nyandarua, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Nyandarua, Kenya", e.target.checked)}
+                                                            label="Nyandarua, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Bamburi, Mombasa")}
-                                                            onChange={(e) => handleLocationsChange("Bamburi, Mombasa", e.target.checked)}
-                                                            label="Bamburi, Mombasa"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Murang'a, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Murang'a, Kenya", e.target.checked)}
+                                                            label="Murang'a, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
@@ -869,47 +629,48 @@ export default function Search() {
                                                 <div className="w-full lg:w-[50%]  flex gap-4 flex-col">
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Mtwapa, Kilifi")}
-                                                            onChange={(e) => handleLocationsChange("Mtwapa, Kilifi", e.target.checked)}
-                                                            label="Mtwapa, Kilifi"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Meru, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Meru, Kenya", e.target.checked)}
+                                                            label="Meru, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Kilifi Town")}
-                                                            onChange={(e) => handleLocationsChange("Kilifi Town", e.target.checked)}
-                                                            label="Kilifi Town"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Kisii, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Kisii, Kenya", e.target.checked)}
+                                                            label="Kisii, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Ukunda, Kwale")}
-                                                            onChange={(e) => handleLocationsChange("Ukunda, Kwale", e.target.checked)}
-                                                            label="Ukunda, Kwale"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Machakos, Kenya")}
+                                                            onChange={(e) => handleLocationsChange("Machakos, Kenya", e.target.checked)}
+                                                            label="Machakos, Kenya"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="lg:w-[50%] w-full relative p-2">
-                                            <h3 style={{ color: "#FF6922" }}>MORE LOCATIONS</h3>
+                                            <h3 style={{ color: "#16A34A" }}>MORE LOCATIONS</h3>
                                             <div className="relative flex flex-col lg:flex-row mt-4">
                                                 <div className="w-full lg:w-[50%] flex flex-col justify-start ">
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Nairobi")}
-                                                            onChange={(e) => handleLocationsChange("Nairobi", e.target.checked)}
-                                                            label="Nairobi"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("Tanzania")}
+                                                            onChange={(e) => handleLocationsChange("Tanzania", e.target.checked)}
+                                                            label="Tanzania"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
@@ -919,10 +680,10 @@ export default function Search() {
                                                 <div className="w-full lg:w-[50%]  flex gap-4 flex-col">
                                                     <div className="flex flex-col">
                                                         <Checkbox
-                                                            checked={selectedLocations.includes("Nakuru")}
-                                                            onChange={(e) => handleLocationsChange("Nakuru", e.target.checked)}
-                                                            label="Nakuru"
-                                                            color="#FF6922"
+                                                            checked={selectedLocations.includes("DRC (Congo)")}
+                                                            onChange={(e) => handleLocationsChange("DRC (Congo)", e.target.checked)}
+                                                            label="DRC (Congo)"
+                                                            color="#16A34A"
                                                             c="black"
                                                             size="md"
                                                         />
@@ -941,8 +702,8 @@ export default function Search() {
                         </Popover>
                     </div>
 
-                    <div className="rounded-sm w-[100%] lg:w-[20%] h-full p-2 flex justify-center items-center" onClick={handleSearch}>
-                        <button className="bg-slate-400 w-full lg:w-[80%] py-4 rounded-sm cursor-pointer">SEARCH</button>
+                    <div className="rounded-sm w-[100%] lg:w-[25%] h-full p-2 flex justify-center items-center" onClick={handleSearch}>
+                        <button className="bg-green-800 text-white w-full lg:w-[80%] py-4 rounded-sm cursor-pointer">SEARCH</button>
                     </div>
                 </div>
             </div>
@@ -951,7 +712,7 @@ export default function Search() {
             <div className="fixed bottom-0 z-[998] w-[100vw] bg-white p-2">
                 <div className=" flex lg:hidden px-2 justify-between top-[80vh]   ">
                     <button className="bg-white w-[48%] py-4 rounded-sm cursor-pointer border-[1px] border-[#232323];" onClick={() => setOpened((p) => !p)} >{opened ? 'CLOSE' : 'SEARCH'}</button>
-                    <button className="bg-[#232323] w-[48%] py-4 rounded-sm cursor-pointer text-white"  onClick={() => setOpened2(true)}>GET IN TOUCH</button>
+                    <button className="bg-green-800 w-[48%] py-4 rounded-sm cursor-pointer text-white" onClick={() => setOpened2(true)}>GET IN TOUCH</button>
                 </div>
             </div>
             {/* mobile */}
@@ -965,7 +726,7 @@ export default function Search() {
                 onClose={() => setOpened2(false)} // Close Filter Modal
                 title="Get in touch"
             >
-                <AppointmentModal setOpened={setOpened2}/>
+                <AppointmentModal setOpened={setOpened2} />
             </Modal>
         </>
     )

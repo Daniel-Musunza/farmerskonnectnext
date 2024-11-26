@@ -58,7 +58,7 @@ export function StatBox({ finalValue, label, number }: StatBoxProps) {
   }, []);
 
   return (
-    <div ref={statRef} className={`stat-box stat-box${number} text-center`}>
+    <div ref={statRef} className={`stat-box stat-box${number} text-center rounded-md shadow-md`}>
       <h3 className="text-3xl font-bold">{count}+</h3>
       <p className="text-lg text-gray-600">{label}</p>
     </div>

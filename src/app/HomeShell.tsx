@@ -188,7 +188,7 @@ const Blogs = ({ blogs }: any) => {
   ))
 
   return (
-    <div className='container mx-auto px-6 flex flex-col justify-center mt-[20px] lg:mt-[50px] mb-[200px]'>
+    <div className='container mx-auto  flex flex-col justify-center mt-[20px] lg:mt-[50px] mb-[200px]'>
       <div className="container mx-auto  flex justify-center items-center">
         <div className="w-full lg:w-[80%] px-2">
           <div className="relative w-full fade-left" ref={fadeLeftRef}>
@@ -232,7 +232,7 @@ export default function HomeShell({ blogs }: any) {
           <SlideCaption />
 
           {/* Additional search or components */}
-          {/* <Search /> */}
+          <Search />
         </div>
       </section>
 
@@ -252,7 +252,7 @@ export default function HomeShell({ blogs }: any) {
             <div className="flex justify-center">
               <Link
                 href="/listings"
-                className="w-fit bg-green-800 text-white uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
+                className="w-fit bg-green-800 text-white text-center uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
               >
                 I want to get in contract
               </Link>
@@ -270,7 +270,7 @@ export default function HomeShell({ blogs }: any) {
             <div className="flex justify-center">
               <Link
                 href="/listings"
-                className="w-fit bg-green-800 text-white uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
+                className="w-fit bg-green-800 text-white text-center uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
               >
                 I invest in farms
               </Link>
@@ -288,7 +288,7 @@ export default function HomeShell({ blogs }: any) {
             <div className="flex justify-center">
               <Link
                 href="/listings"
-                className="w-fit bg-green-800 text-white uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
+                className="w-fit bg-green-800 text-white text-center uppercase py-3 px-8 text-sm font-semibold hover:bg-green-900 transition rounded-sm"
               >
                 I am interested in agriculture
               </Link>
