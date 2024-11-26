@@ -73,9 +73,9 @@ export default function Shell() {
             <div className='container mx-auto px-6 flex flex-col justify-center mb-[200px]'>
                 <div className="flex w-full justify-center lg:h-[200px]">
                     <div className=" py-16 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
-                        <div className="flex flex-col text-center lg:text-left ">
-                            <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title>
-                            <Title order={1} className="text-3xl font-bold  text-green-900 fade-left" ref={fadeLeftRef}>OUR SOLUTIONS</Title>
+                        <div className="flex flex-col text-center lg:text-left lg:ml-[100px] ">
+                            {/* <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title> */}
+                            <Title order={1} className="text-3xl font-bold  text-green-900 fade-left lg:py-4" ref={fadeLeftRef}>WHAT WE OFFER</Title>
                         </div>
                         <div className="flex items-right">
                             <p className="text-gray-900 text-bold text-lg max-w-xl mx-auto fade-right" ref={fadeRightRef}>
