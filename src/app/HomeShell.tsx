@@ -232,10 +232,10 @@ export default function HomeShell({ blogs }: any) {
         <div className="absolute inset-0 bg-black/40 rounded-b-[50px] lg:rounded-b-[100px]" />
         <div className="absolute bottom-6 w-full lg:bottom-10  text-white">
           <div className="flex flex-col items-center justify-center w-full gap-2 p-[20px]">
-          <div className="flex items-center justify-center w-[268px] h-[30px] border border-white text-white text-sm font-semibold tracking-wide">
-                    WE ARE FARMERS' KONNECT
-                </div>
-            <Title order={1} component="div"> <span className="text-white">🌱 Transforming farming through contract farming for oil crops 🌱</span></Title>
+            <div className="flex items-center justify-center w-[268px] h-[30px] border border-white text-white text-sm font-semibold tracking-wide">
+              WE ARE FARMERS' KONNECT
+            </div>
+            <Title order={2} component="div" className="text-center">Transforming farming through contract farming for oil crops 🌱</Title>
           </div>
         </div>
       </div>
