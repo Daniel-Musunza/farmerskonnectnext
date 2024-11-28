@@ -117,7 +117,7 @@ export default function Header() {
                     </Link>
                     <nav>
                         <div className="navbar2" id="navbar2">
-                            <Link href="/about" className='text-black font-bold'>ABOUT US</Link>
+                            <a href="#about" className='text-black font-bold'>ABOUT US</a>
                             <Link href="/solutions" className='text-black font-bold'>SOLUTIONS</Link>
                             <Link href="/listings" className='text-black font-bold'> LAND LISTINGS</Link>
                             <Link href={`/blogs/${firstblogid}`} className='text-black font-bold'>BLOGS</Link>
@@ -180,9 +180,9 @@ export default function Header() {
 
                             <Menu.Dropdown >
                                 <Menu.Item py="md">
-                                    <Link href="/about" className='text-white font-bold'>
+                                    <a href="#about" className='text-white font-bold'>
                                         ABOUT US
-                                    </Link>
+                                    </a>
                                 </Menu.Item>
                                 <Menu.Item py="md">
                                     <Link href="/solutions" className='text-white font-bold'>

@@ -214,8 +214,35 @@ export default function HomeShell({ blogs }: any) {
 
 
   return (
-    <div className="overflow-x-hidden ">
-      <section className="hero">
+    <div className="min-h-screen bg-white flex justify-center flex-col overflow-x-hidden">
+
+      {/* Hero Section */}
+      <div className="relative h-[50vh] md:h-[50vh] lg:h-[60vh] container mx-auto bg-white">
+        <div className="overflow-hidden rounded-b-[50px] lg:rounded-b-[100px] bg-white bg-cover bg-no-repeat">
+          <video
+            src="/videos/canolavideo.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-[50vh] md:h-[50vh] lg:h-[60vh] w-full object-cover"
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-black/40 rounded-b-[50px] lg:rounded-b-[100px]" />
+        <div className="absolute bottom-6 w-full lg:bottom-10  text-white">
+          <div className="flex flex-col items-center justify-center w-full gap-2 p-[20px]">
+          <div className="flex items-center justify-center w-[268px] h-[30px] border border-white text-white text-sm font-semibold tracking-wide">
+                    WE ARE FARMERS' KONNECT
+                </div>
+            <Title order={1} component="div"> <span className="text-white">🌱 Transforming farming through contract farming for oil crops 🌱</span></Title>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* <section className="hero">
         <div className="home-hero-slider">
           <div className="video-container">
             <video
@@ -228,16 +255,14 @@ export default function HomeShell({ blogs }: any) {
             />
           </div>
 
-          {/* Render caption dynamically based on currentSlide */}
           <SlideCaption />
 
-          {/* Additional search or components */}
           <Search />
         </div>
-      </section>
+      </section> */}
 
-      <div className="relative p-[20px] h-fit mt-[20px] lg:mt-[50px] w-full md:w-[80%] mx-auto">
-        <Title order={2} py="md" className="text-center uppercase">
+      <div className="relative p-[20px] h-fit  w-full md:w-[80%] mx-auto">
+        <Title order={2} py="lg" className="text-center uppercase">
           Discover The Opportunities we have for you in Agriculture
         </Title>
         <div className="flex flex-col md:flex-row md:justify-center lg:justify-between gap-4">
@@ -265,7 +290,7 @@ export default function HomeShell({ blogs }: any) {
               Invest in Farms
             </Title>
             <Text size="md" >
-            Secure your future with sustainable farming investments tailored for you. Build long-term success by investing in agriculture that promotes growth, security, and environmental responsibility.
+              Secure your future with sustainable farming investments tailored for you. Build long-term success by investing in agriculture that promotes growth, security, and environmental responsibility.
             </Text>
             <div className="flex justify-center">
               <Link
@@ -283,7 +308,7 @@ export default function HomeShell({ blogs }: any) {
               Agriculture Enthusiast
             </Title>
             <Text size="md" >
-             Learn and explore the endless possibilities in modern agriculture, where innovation meets opportunity.
+              Learn and explore the endless possibilities in modern agriculture, where innovation meets opportunity.
             </Text>
             <div className="flex justify-center">
               <Link
@@ -301,7 +326,7 @@ export default function HomeShell({ blogs }: any) {
 
       <LandToLease />
 
-      <section className="company-section relative  p-[20px]  h-fit mt-[20px] lg:mt-[50px] w-full md:w-[80%] mx-auto flex no-wrap">
+      <section id="#about" className="company-section relative  p-[20px]  h-fit mt-[20px] lg:mt-[50px] w-full md:w-[80%] mx-auto flex no-wrap">
         <div className="company-content">
           <div className="company-image overflow-hidden bg-cover bg-no-repeat flex justify-center items-center">
             <img src={companyImage}
