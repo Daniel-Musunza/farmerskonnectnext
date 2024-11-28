@@ -14,7 +14,7 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
                     borderBottomRightRadius: "80px",
                 }}
             >
-                <div className="mt-5 mx-5">
+                <div className="">
                     <Image
                         src={slide.image}
                         alt={slide.title}

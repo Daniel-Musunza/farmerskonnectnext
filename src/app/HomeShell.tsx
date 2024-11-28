@@ -238,7 +238,7 @@ export default function HomeShell({ blogs }: any) {
 
       <div className="relative p-[20px] h-fit mt-[20px] lg:mt-[50px] w-full md:w-[80%] mx-auto">
         <Title order={2} py="md" className="text-center uppercase">
-          Discover Opportunities we have for you in Agriculture
+          Discover The Opportunities we have for you in Agriculture
         </Title>
         <div className="flex flex-col md:flex-row md:justify-center lg:justify-between gap-4">
           {/* Card 1 */}

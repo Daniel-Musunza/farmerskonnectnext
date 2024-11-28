@@ -113,7 +113,7 @@ export default function Header() {
                             height={50}
                             className="object-cover transition duration-300 ease-in-out hover:scale-110 p-0"
                         />
-                        <Title order={3} className='inline-title'>FARMERS' KONNECT</Title>
+                        <Title order={3} className='inline-title capitalize'>Farmers' konnect</Title>
                     </Link>
                     <nav>
                         <div className="navbar2" id="navbar2">

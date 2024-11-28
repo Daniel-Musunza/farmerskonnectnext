@@ -9,7 +9,7 @@ export default function SlideCaption() {
         id: 1,
         logo: "/images/canolalogo.png",
         caption: "ONGOING CONTRACT",
-        title: "MERU 40 HECTARES",
+        title:  "🌱 Transforming Farming through contract Farming for Oil crops 🌱",
         mission: "🌱 Transforming Farming through contract Farming for Oil crops 🌱"
     }
 
@@ -23,15 +23,15 @@ export default function SlideCaption() {
                     height={0}
                 />
             </div>
-            <div className="slide-badge">
+            {/* <div className="slide-badge">
                 <div className="flex items-center justify-center w-[168px] h-[30px] border border-white text-white text-sm font-semibold tracking-wide">
                     {currentSlide.caption}
                 </div>
 
-            </div>
+            </div> */}
             <h2 className="flex flex-wrap">{currentSlide.title}</h2>
             {/* <h2 style={{ color: "#FF6922" }} className="">Living Experience</h2> */}
-            <p className="mb-2 ">{currentSlide.mission}</p>
+            {/* <p className="mb-2 ">{currentSlide.mission}</p> */}
             <Link href={`/listings/${currentSlide.id}`}>
                 <span className="btn btn-ghost rounded-sm">Learn More</span>
             </Link>
