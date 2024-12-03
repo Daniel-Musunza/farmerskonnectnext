@@ -25,7 +25,7 @@ export default function Header() {
     });
     const [lastScrollY, setLastScrollY] = useState(0);
     const [opened, setOpened] = useState(false);
-    const [firstblogid, setFirstBlogId] = useState<any>(null);
+    const [firstblogid, setFirstBlogId] = useState<any>(1);
 
     let user;
 
