@@ -10,6 +10,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { buttonText } from "@/utils/buttonText";
 import CustomCarousel from "@/components/CustomCarousel";
 import AboutSection from "@/components/AboutSection";
+import Footer from "@/components/footer";
 
 const LandToLease = () => {
   const fadeLeftRef = useIntersectionObserver({ threshold: 0.05 });
@@ -182,7 +183,7 @@ const Blogs = ({ blogs }: any) => {
   ))
 
   return (
-    <div className='container mx-auto  flex flex-col justify-center mt-[20px] lg:mt-[50px] mb-[200px]'>
+    <div className='container mx-auto  flex flex-col justify-center mt-[20px] lg:mt-[50px]'>
       <div className="container mx-auto  flex justify-center items-center">
         <div className="w-full lg:w-[80%] px-2">
           <div className="relative w-full fade-left" ref={fadeLeftRef}>
@@ -308,7 +309,7 @@ export default function HomeShell({ blogs }: any) {
       </div>
 
       <Blogs blogs={blogs} />
-
+      <Footer />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Title } from '@mantine/core'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import AboutSection from '@/components/AboutSection'
+import Footer from '@/components/footer'
 
 export default function Shell() {
 
@@ -61,7 +62,7 @@ export default function Shell() {
 
 
             </div>
-
+            <Footer />
         </div>
     )
 }

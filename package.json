@@ -20,6 +20,7 @@
     "@mantine/modals": "^7.12.2",
     "@tabler/icons-react": "^3.21.0",
     "bs58": "^6.0.0",
+    "farmerskonnect": "file:",
     "lucide-react": "^0.454.0",
     "next": "15.0.1",
     "react-slick": "^0.30.2",

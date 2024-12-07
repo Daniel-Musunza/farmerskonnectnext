@@ -9,6 +9,7 @@ import { Container, Title } from '@mantine/core'
 import CustomCarousel from '@/components/CustomCarousel'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import SolutionCard from "@/components/SolutionCard";
+import Footer from '@/components/footer'
 
 export default function Shell() {
 
@@ -96,7 +97,7 @@ export default function Shell() {
 
 
             </div>
-
+            <Footer />
         </div>
     )
 }
