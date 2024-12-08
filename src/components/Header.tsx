@@ -13,7 +13,7 @@ export default function Header() {
     useEffect(() => {
         setIsClient(true);
     }, []);
-    
+
     const router = useRouter()
     const pathname = usePathname();
     const [headerStyle, setHeaderStyle] = useState<any>({
@@ -101,7 +101,6 @@ export default function Header() {
                 id="header"
                 style={{
                     ...headerStyle,
-
                 }}
             >
                 <div className="container">
@@ -166,10 +165,18 @@ export default function Header() {
                         </Modal>
                         <Menu
                             shadow="md"
-                            width="98%"
+                            width="100%"
+                            
                             transitionProps={{ transition: 'fade-down', duration: 150 }}
                             styles={{
-                                dropdown: { backgroundColor: '#16A34A', marginTop: '5px', color: "#ffff", fontSize: 'bold' }, // Apply background color to the dropdown
+                                dropdown: {
+                                    backgroundColor: '#166534', // Background color for the dropdown
+                                    marginTop: '5px',
+                                    marginLeft: '-5px',
+                                    color: '#ffff',
+                                    fontSize: 'bold',
+                                    border: '2px solid green', // Set the border color
+                                },
                             }}
                         >
                             <Menu.Target>

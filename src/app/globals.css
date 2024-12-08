@@ -562,7 +562,6 @@ iframe {
 
 /* footer */
 .footer {
-    background-color: #16A34A;
     color: #ffffff;
     font-size: 14px;
     margin-top: 50px;
@@ -616,7 +615,6 @@ iframe {
 .footer-bottom {
     text-align: center;
     padding: 20px;
-    background-color: #16A34A;
     color: #b0deb0;
     font-size: 14px;
 }

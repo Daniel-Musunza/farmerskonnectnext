@@ -6,7 +6,7 @@ export default function Footer() {
 
 
     return (
-        <footer className="footer">
+        <footer className="footer bg-green-800">
             <div className="footer-content">
                 <div className="footer-column">
                     <div className="list">
@@ -59,7 +59,7 @@ export default function Footer() {
 
                 </div>
             </div>
-            <div className="footer-bottom">
+            <div className="footer-bottom bg-green-800">
                 &copy; 2024 Farmers' Konnect
             </div>
 

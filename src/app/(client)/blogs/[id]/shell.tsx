@@ -8,11 +8,11 @@ import Link from "next/link";
 import { buttonText } from "../../../../utils/buttonText";
 import Image from "next/image";
 import Footer from "@/components/footer";
-import { useRouter } from "next/router"; // Import useRouter
+import { useParams } from "next/navigation";
 
 export default function Shell({ blogs }: any) {
-    const router = useRouter(); // Access router
-    const { id } = router.query; // Extract id from query
+    // Using params to access the blog ID
+    const { id } = useParams(); // Extract id from params
 
     const [clientText, setClientText] = useState('');
 
@@ -20,6 +20,7 @@ export default function Shell({ blogs }: any) {
         setClientText(buttonText()); // Set random text only on the client.
     }, []);
 
+    // Find the blog by its ID
     const currentBlog = blogs.find((b: any) => b.id === id);
 
     const fadeLeftRef = useIntersectionObserver({ threshold: 0.1 });
@@ -49,9 +50,9 @@ export default function Shell({ blogs }: any) {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 65vw"
                                     placeholder="blur"
                                     blurDataURL="/images/blur.avif"
-                                    loading='eager'
+                                    loading="eager"
                                     className="w-full lg:w-[317px] h-[250px] object-cover z-5 transition duration-300 ease-in-out hover:scale-110"
-                                    style={{ objectPosition: '50% 50%' }}
+                                    style={{ objectPosition: "50% 50%" }}
                                 />
                                 <div className="p-6">
                                     <h2 className="text-[27px] uppercase">{property.title}</h2>

@@ -71,7 +71,7 @@ export default function Shell() {
 
 
             {/* Main Content */}
-            <div className='container mx-auto px-6 flex flex-col justify-center mb-[200px]'>
+            <div className='container mx-auto px-6 flex flex-col justify-center'>
                 <div className="flex w-full justify-center lg:h-[200px]">
                     <div className=" py-16 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
                         <div className="flex flex-col text-center lg:text-left lg:ml-[100px] ">
