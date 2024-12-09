@@ -44,10 +44,9 @@ export default function Shell() {
 
             {/* Main Content */}
             <div className='container mx-auto px-6 flex flex-col justify-center'>
-                <div className="flex w-full justify-center lg:h-[200px]">
-                    <div className=" py-16 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
+                <div className="flex w-full justify-center my-0 py-0 lg:h-[150px]">
+                    <div className="pt-4 lg:pt-8 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
                         <div className="flex flex-col text-center lg:text-left lg:ml-[100px] ">
-                            {/* <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title> */}
                             <Title order={1} className="text-3xl font-bold  text-green-900 fade-left lg:py-4" ref={fadeLeftRef}>ABOUT US</Title>
                         </div>
                         <div className="flex items-right">

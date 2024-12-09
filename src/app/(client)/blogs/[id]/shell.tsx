@@ -27,9 +27,9 @@ export default function Shell({ blogs }: any) {
 
     return (
         <>
-            <div className="p-[20px] lg:mt-[50px] overflow-hidden flex gap-4 justify-center relative w-full mt-[100px]">
+            <div className="p-[20px] mt-[50px] overflow-hidden flex gap-4 justify-center relative w-full">
                 <div className="w-full md:w-[80%]">
-                    <div className="flex flex-col gap-4 fade-left" ref={fadeLeftRef}>
+                    <div className="flex flex-col gap-4 fade-left justify-center" ref={fadeLeftRef}>
                         <Title order={2} py="lg">{currentBlog?.title}</Title>
                         <div className="w-full flex flex-col gap-4">
                             <div className="flex w-full items-center h-fit">

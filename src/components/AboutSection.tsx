@@ -7,7 +7,7 @@ export default function AboutSection() {
     const fadeRightRef = useIntersectionObserver({ threshold: 0.1 });
 
     return (
-        <section id="#about" className="company-section relative  p-[20px]  h-fit  w-full md:w-[80%] mx-auto flex no-wrap">
+        <section id="#about" className="company-section relative  lg:p-[20px]  h-fit  w-full md:w-[80%] mx-auto flex no-wrap">
         <div className="company-content">
           <div className="company-image overflow-hidden bg-cover bg-no-repeat flex justify-center items-center">
             <img src={companyImage}

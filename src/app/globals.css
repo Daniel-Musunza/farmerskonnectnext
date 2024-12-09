@@ -7,6 +7,8 @@
     --foreground: #171717;
 }
 
+
+  
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
@@ -115,7 +117,10 @@ body {
 }
 
 @media (max-width:1080px) {
-   
+    body {
+        zoom: 0.8; 
+      }
+  
     section {
         padding: 10px 25px;
     }
@@ -123,7 +128,10 @@ body {
     .navbar {
         margin-top: 100px;
     }
-
+    .header{
+        width: 100%;
+        
+    }
     .header .container {
         width: 100%;
     }
@@ -131,6 +139,10 @@ body {
 }
 
 @media (max-width:756px) {
+    body {
+        zoom: 1; 
+      }
+  
     .header {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
