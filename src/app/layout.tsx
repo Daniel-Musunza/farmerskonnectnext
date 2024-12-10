@@ -7,6 +7,7 @@ import '@mantine/carousel/styles.css';
 import 'react-toastify/dist/ReactToastify.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import '../../public/developments.css'
 
 
 import { MantineProvider } from '@mantine/core';
@@ -24,6 +25,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
 
 export const metadata: Metadata = {
   title: "Farmers` Konnect",
