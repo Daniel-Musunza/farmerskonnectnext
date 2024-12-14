@@ -17,6 +17,7 @@ export default function Shell() {
                 { src: "/images/land3.webp" },
             ],
             title: "LAND IN NYERI",
+            acres: 20,
             price: 200000,
             location: {
                 longitude: "643f567",
@@ -34,6 +35,7 @@ export default function Shell() {
                 { src: "/images/land2.webp" }
             ],
             title: "SPACIOUS LAND IN MERU",
+            acres: 30,
             price: 300000,
             location: {
                 longitude: "643f567",
@@ -52,6 +54,7 @@ export default function Shell() {
             ],
             title: "AGRICULTURAL LAND IN KILIFI",
             price: 350000,
+            acres: 16,
             location: {
                 longitude: "643f567",
                 latitude: "u6uytjy",

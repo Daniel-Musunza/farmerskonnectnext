@@ -88,7 +88,7 @@ export default function NewListingCard({ data }: any) {
                     {/* <!-- Information Section --> */}
                     <div className="md:w-1/2 p-6 flex flex-col justify-between">
                         <div>
-                            <h3 className="text-xl font-bold mb-2">{data?.title} </h3>
+                            <h3 className="text-xl font-bold mb-2">{data?.title} | {data.propertyType}</h3>
                             <div className="mb-4">
                                 <div className="flex items-center mb-1">
                                     <div className="w-[50px] mr-2 flex justify-center items-center">
@@ -100,7 +100,7 @@ export default function NewListingCard({ data }: any) {
                                             className="w-full"
                                         />
                                     </div>
-                                    <span className="font-semibold uppercase">Main Feature</span> <span className="ml-2">{data.propertyType}</span>
+                                    <span className="font-semibold uppercase">Acres</span> <span className="ml-2">{data.acres}</span>
                                 </div>
                                 <div className="flex items-center mb-1">
                                     <div className="w-[50px] mr-2 flex justify-center items-center">
