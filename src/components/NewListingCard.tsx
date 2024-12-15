@@ -91,16 +91,16 @@ export default function NewListingCard({ data }: any) {
                             <h3 className="text-xl font-bold mb-2">{data?.title} | {data.propertyType}</h3>
                             <div className="mb-4">
                                 <div className="flex items-center mb-1">
-                                    <div className="w-[50px] mr-2 flex justify-center items-center">
+                                    <div className="w-[50px] h-[20px] mr-2 flex justify-center items-center align-middle">
                                         <Image  
                                             src="https://static.wixstatic.com/media/1bb245_e078343b722e4c63a91e1e24c2da1a79~mv2.png/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/sqm.png"
                                             alt="Type Icon"
                                             width={25}
-                                            height={0}
+                                            height={20}
                                             className="w-full"
                                         />
                                     </div>
-                                    <span className="font-semibold uppercase">Acres</span> <span className="ml-2">{data.acres}</span>
+                                    <span className="font-semibold uppercase">Size: </span> <span className="ml-2">{data.acres} Acres</span>
                                 </div>
                                 <div className="flex items-center mb-1">
                                     <div className="w-[50px] mr-2 flex justify-center items-center">
@@ -113,7 +113,7 @@ export default function NewListingCard({ data }: any) {
                                         />
                                     </div>
 
-                                    <span className="font-semibold">PRICE</span> <span className="ml-2">From Ksh. {formatNumberWithCommas(data?.price)}</span>
+                                    <span className="font-semibold">PRICE: </span> <span className="ml-2">From Ksh. {formatNumberWithCommas(data?.price)}</span>
                                 </div>
                                 <div className="flex items-center mb-1">
                                     <div className="w-[50px] mr-2 flex justify-center items-center">
@@ -125,7 +125,7 @@ export default function NewListingCard({ data }: any) {
                                             className="w-[50%]"
                                         />
                                     </div>
-                                    <span className="font-semibold">LOCATION</span> <span className="ml-2">{data.location.name}</span>
+                                    <span className="font-semibold">LOCATION: </span> <span className="ml-2">{data.location.name}</span>
                                 </div>
                             </div>
                             <p className="text-gray-700">

@@ -57,14 +57,16 @@ export default function Shell() {
                 </div>
 
                 <div className="absolute inset-0 bg-black/40 rounded-b-[100px]" />
-                <div className="absolute bottom-6 left-4 lg:bottom-10 lg:left-20 text-white">
+                <div className="absolute bottom-2 left-4 lg:bottom-10 lg:left-20 text-white">
                     <div className="flex flex-col items-left p-[20px]">
                         <div className="flex items-center gap-2 text-sm ">
                             <Link href="/" className="hover:underline">FARMERS' KONNECT | HOME</Link>
                             <span>›</span>
                             <span className="text-green-400">SOLUTIONS</span>
                         </div>
-                        <Title order={1} component="div"> <span className="text-white">SOLUTIONS</span></Title>
+                        <Title order={1} component="div" className="hidden md:flex"> <span className="text-white ">CONTRACT FARMING</span></Title>
+                        <Title order={2} component="div" className="flex md:hidden"> <span className="text-white ">CONTRACT FARMING</span></Title>
+
                     </div>
                 </div>
             </div>
@@ -72,8 +74,8 @@ export default function Shell() {
 
             {/* Main Content */}
             <div className='container mx-auto px-6 flex flex-col justify-center'>
-                <div className="flex w-full justify-center lg:h-[200px]">
-                    <div className=" py-16 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
+                <div className="flex w-full justify-center my-0 py-0 lg:h-[150px]">
+                    <div className="py-4 lg:pt-8 flex flex-col w-[90%] md:w-[80%] lg:flex-row justify-center md:justify-between gap-2">
                         <div className="hidden lg:flex flex-col text-center lg:text-left lg:ml-[100px] ">
                             {/* <Title order={4} className="text-lg font-bold ">WHAT WE OFFER</Title> */}
                             <Title order={1} className="text-3xl font-bold  text-green-900 fade-left lg:py-4" ref={fadeLeftRef}>WHAT WE OFFER</Title>

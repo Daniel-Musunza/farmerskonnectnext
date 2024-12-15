@@ -175,7 +175,7 @@ export default function Header() {
                                     marginLeft: '-5px',
                                     color: '#ffff',
                                     fontSize: 'bold',
-                                    border: '2px solid green', // Set the border color
+                                    border: '2px solid #166534', // Set the border color
                                 },
                             }}
                         >
@@ -187,22 +187,22 @@ export default function Header() {
 
                             <Menu.Dropdown >
                                 <Menu.Item py="md">
-                                    <Link href="/about" className='text-white font-bold'>
+                                    <Link href="/about" className='text-white font-bold h-full w-full'>
                                         ABOUT US
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item py="md">
-                                    <Link href="/solutions" className='text-white font-bold'>
+                                    <Link href="/solutions" className='text-white font-bold h-full w-full'>
                                         SOLUTIONS
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item py="md">
-                                    <Link href="/listings" className='text-white font-bold'>
+                                    <Link href="/listings" className='text-white font-bold h-full w-full'>
                                         LAND LISTINGS
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item py="md">
-                                    <Link href={`/blogs/${firstblogid}`} className='text-white font-bold'>BLOGS</Link>
+                                    <Link href={`/blogs/${firstblogid}`} className='text-white font-bold h-full w-full'>BLOGS</Link>
                                 </Menu.Item>
                                 <Menu.Item py="md">
                                     <a href="https://wa.me/254703363464"

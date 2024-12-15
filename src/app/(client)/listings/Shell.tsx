@@ -81,14 +81,16 @@ export default function Shell() {
                 </div>
 
                 <div className="absolute inset-0 bg-black/40 rounded-b-[100px]" />
-                <div className="absolute bottom-6 left-4 lg:bottom-10 lg:left-20 text-white">
+                <div className="absolute bottom-2 left-4 lg:bottom-10 lg:left-20 text-white">
                     <div className="flex flex-col items-left p-[20px]">
                         <div className="flex items-center gap-2 text-sm ">
                             <Link href="/" className="hover:underline">FARMERS' KONNECT | HOME</Link>
                             <span>›</span>
                             <span className="text-green-400">LISTINGS</span>
                         </div>
-                        <Title order={1} component="div"> <span className="text-white">LISTINGS</span></Title>
+                        <Title order={1} component="div" className="hidden md:flex"> <span className="text-white">LISTINGS</span></Title>
+                        <Title order={2} component="div" className="flex md:hidden"> <span className="text-white">LISTINGS</span></Title>
+
                     </div>
                 </div>
             </div>
